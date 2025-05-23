@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_nocontrat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No contrat"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_intitule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Intitule"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_etat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Etat"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tv_debut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date de début"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tv_fin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date de fin"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tv_domaine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Domaine"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tv_prix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Montant de l'intervention"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/ModifierButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifier"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

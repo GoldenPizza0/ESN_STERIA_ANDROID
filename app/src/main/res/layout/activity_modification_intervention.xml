@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModificationIntervention">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/titreModification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MODIFICATION"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/intitule" />
+
+    <!-- Intitulé -->
+    <TextView
+        android:id="@+id/intitule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intitulé"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/titreModification"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/intituleInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="#D7D7D7"
+        android:inputType="text"
+        android:enabled="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/intitule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:hint="MAINTENANCE ..." />
+
+    <!-- Date de début -->
+    <TextView
+        android:id="@+id/dateDebut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date de début"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/intituleInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/dateDebutInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="#D7D7D7"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@id/dateDebut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:hint="AAAA-MM-JJ"/>
+
+    <!-- Date de fin -->
+    <TextView
+        android:id="@+id/dateFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date de fin"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/dateDebutInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/dateFinInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:inputType="date"
+        android:background="#D7D7D7"
+        app:layout_constraintTop_toBottomOf="@id/dateFin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:hint="AAAA-MM-JJ"/>
+
+    <!-- Montant -->
+    <TextView
+        android:id="@+id/prix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Montant de l'intervention"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/dateFinInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/prixInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:inputType="number"
+        android:background="#D7D7D7"
+        app:layout_constraintTop_toBottomOf="@id/prix"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:hint="1200"/>
+
+    <!-- État d'avancement -->
+    <TextView
+        android:id="@+id/etat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="État d'avancement"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/prixInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/etatRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/etat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp">
+
+        <RadioButton
+            android:id="@+id/etatAFaire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="À faire" />
+
+        <RadioButton
+            android:id="@+id/etatEnCours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="En cours" />
+
+        <RadioButton
+            android:id="@+id/etatTermine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terminé" />
+    </RadioGroup>
+
+    <!-- Bouton Valider -->
+    <Button
+        android:id="@+id/validerModification"
+        android:onClick="onClickValider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VALIDER"
+        android:backgroundTint="#2D51C5"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/etatRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
